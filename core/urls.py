@@ -8,7 +8,7 @@ from.views import signout
 from.views import destinations
 
 urlpatterns = [
-    path("", home, name='Homepage'),
+    path("", home, name='home'),
     path('Culture/', culture, name='culture'),
      path('Signup/', signup, name='signup'),
     path('loginpage/',   loginpage, name='loginpage'),
