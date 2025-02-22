@@ -36,7 +36,7 @@ def loginpage(request):
         if user is not None:
             print (user)
             login(request,user)
-            return redirect ("Homepage")
+            return redirect ("home")
     return render(request,'login.html')
 def Destinations(request):
     return render(request, 'destinations.html')
