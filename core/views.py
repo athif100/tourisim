@@ -39,4 +39,4 @@ def loginpage(request):
             return redirect ("Homepage")
     return render(request,'login.html')
 def destinations(request):
-    return render(request, 'Destinations.html')
+    return render(request, 'destinations.html')
