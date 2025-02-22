@@ -13,7 +13,7 @@ urlpatterns = [
      path('Signup/', signup, name='signup'),
     path('loginpage/',   loginpage, name='loginpage'),
     path ('logout/' , signout, name='logout'),
-    path('Destinations/',   destinations, name='destinations')
+    path('Destinations/',   Destinations, name='Destinations')
 
     
     ]
