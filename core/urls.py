@@ -5,7 +5,7 @@ from.views import culture
 from.views import signup
 from.views import loginpage
 from.views import signout
-from.views import destinations
+from.views import Destinations
 
 urlpatterns = [
     path("", home, name='home'),
