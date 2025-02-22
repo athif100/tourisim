@@ -38,5 +38,5 @@ def loginpage(request):
             login(request,user)
             return redirect ("Homepage")
     return render(request,'login.html')
-def destinations(request):
+def Destinations(request):
     return render(request, 'destinations.html')
