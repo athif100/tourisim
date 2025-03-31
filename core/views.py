@@ -3,10 +3,13 @@ from. models import MYUSERS
 from django.shortcuts import redirect
 from django.contrib.auth import authenticate
 from django.contrib.auth import login
+from django.contrib.auth import logout
 from django.contrib.auth.hashers import make_password
 
 # Create your views here.
-
+def signout(request):
+    logout(request)
+    return redirect ("loginpage")
 
 def home(request):
     return render(request, 'index.html')
@@ -25,7 +28,7 @@ def signup(request):
         new_user=MYUSERS(first_name=first_name,last_name=last_name,email=email,password=password,username=username)
         new_user.save()
         
-        return redirect ("Homepage")
+        return redirect ("loginpage")
     return render(request, 'Signup.html')
 def loginpage(request):
     if request.method=="POST":
@@ -35,9 +38,7 @@ def loginpage(request):
         if user is not None:
             print (user)
             login(request,user)
-            return redirect ("Homepage")
+            return redirect ("home")
     return render(request,'login.html')
-def destinations(request):
-    return render(request, 'Destinations.html')
-def about(request):
-    return render(request, 'About.html')
+def Destinations(request):
+    return render(request, 'destinations.html')

@@ -132,4 +132,4 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 AUTH_USER_MODEL="core.MYUSERS"
 
-                            
+CSRF_TRUSTED_ORIGINS=["https://tourisim-production.up.railway.app"]

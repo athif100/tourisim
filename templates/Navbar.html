@@ -34,7 +34,7 @@
         <nav class="navbar navbar-expand-sm fixed-top shadow-sm p-3 mb-5 navheader"
           style="background: linear-gradient(to bottom, #FFFFFF50, #FFFFFF20);">
           <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="{% url 'home'%}>
               <img src="{% static 'LOGO1.png'%}" style="height:50px;" />
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
@@ -43,13 +43,13 @@
             <div class="collapse navbar-collapse" id="navbar1">
               <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                  <a class="nav-link font-weight-bold " style="font-size: 16px; color: #410064;" href="#">Tech Hub</a>
+                  <a class="nav-link font-weight-bold " style="font-size: 16px; color: #410064;" href="{% url 'home' %}">Tech Hub</a>
                 </li>
               
               
                 <li class="nav-item active">
                   <a class="nav-link font-weight-bold " style="font-size: 16px; color: #410064;"
-                    href="#">Destinations</a>
+                    href="{% url 'Destinations'%}">Destination</a>
                 </li>
                 
               
@@ -71,11 +71,16 @@
                 
               </ul>
               {%if user.is_authenticated%}
-              
-                    <p class="navbar-text text-danger ">Welcome {{user.username}}</p>
+              <div class="d-flex flex-row bd-highlight mb-3">
+                    <p class="navbar-text text-primary ">Welcome {{user.username}}</p>
+                      <a class="nav-link font-weight-bold " style="font-size: 16px; color: #410064;" href="{% url 'logout' %}">logout</a>
+                
+              </div>
                     {%else%}
                    <a href="{% url 'loginpage'%}"class="btn-primary p-2">Login</a>
+                   <a href="{% url 'signup'%}"class="btn-primary ms-2 p-2">signup</a>
                     {%endif%}
+                
             </div>
           </div>
         </nav>

@@ -4,16 +4,16 @@ from.views import home
 from.views import culture
 from.views import signup
 from.views import loginpage
-from.views import destinations
-from.views import about
+from.views import signout
+from.views import Destinations
 
 urlpatterns = [
-    path("", home, name='Homepage'),
+    path("", home, name='home'),
     path('Culture/', culture, name='culture'),
      path('Signup/', signup, name='signup'),
     path('loginpage/',   loginpage, name='loginpage'),
-    path('Destinations/',   destinations, name='destinations'),
-    path('About/', about, name='about')
+    path ('logout/' , signout, name='logout'),
+    path('Destinations/',   Destinations, name='Destinations')
 
     
     ]
