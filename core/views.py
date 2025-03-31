@@ -13,6 +13,8 @@ def home(request):
 def culture(request):
     return render(request, 'Culture.html')
 def signup(request):
+    
+    
     if request.method=="POST":
         first_name=request.POST.get("first_name")
         last_name=request.POST.get("last_name")
@@ -37,3 +39,5 @@ def loginpage(request):
     return render(request,'login.html')
 def destinations(request):
     return render(request, 'Destinations.html')
+def about(request):
+    return render(request, 'About.html')
