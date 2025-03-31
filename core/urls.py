@@ -6,6 +6,7 @@ from.views import signup
 from.views import loginpage
 from.views import signout
 from.views import Destinations
+from.views import About
 
 urlpatterns = [
     path("", home, name='home'),
@@ -13,7 +14,8 @@ urlpatterns = [
      path('Signup/', signup, name='signup'),
     path('loginpage/',   loginpage, name='loginpage'),
     path ('logout/' , signout, name='logout'),
-    path('Destinations/',   Destinations, name='Destinations')
+    path('Destinations/',   Destinations, name='Destinations'),
+    path('About/',   About, name='About')
 
     
     ]

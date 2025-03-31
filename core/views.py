@@ -42,3 +42,5 @@ def loginpage(request):
     return render(request,'login.html')
 def Destinations(request):
     return render(request, 'destinations.html')
+def About(request):
+    return render(request, 'About.html')
