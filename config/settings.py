@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-hth_qjd&4)th69+yg2srb!n2!nw3gavjpe+$ubj-brse=@6c6a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["tourisim-production.up.railway.app","127.0.0.1"]
+ALLOWED_HOSTS = ["tourisim-production.up.railway.app","127.0.0.1","gojosatoru.baydenevents.com"]
 
 
 # Application definition
