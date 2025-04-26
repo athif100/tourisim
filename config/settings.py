@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'core.apps.CoreConfig'
 ]
 SITE_NAME="gojosatoru.baydenevents.com"
+SITE_ID=1
+DOMAIN="gojosatoru.baydenevents.com"
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
